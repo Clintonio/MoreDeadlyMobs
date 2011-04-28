@@ -1,0 +1,55 @@
+MoreDeadlyMobs 0.3.1
+
+Author: Clinton Alexander
+Description: For the adventurer Minecraft can be too easy! Once you build your first mudhut, the hoardes of undead yearning to feast on the gooey innards of your skull are never a problem again.
+
+This mod aims to aid your desire for the fray of combat.
+
+Rather than letting your precious shelters remain immortal against all but the dreaded creature, this mod aims to allow zombies the power to crack through certain blocks (and mobs from other mods if the creator chooses to use this mod as a part of theirs)
+
+Currently, zombies can break through: Mud, Grass, Leaves, Glass, Sand, Wool, Ice and Snow and Wooden Doors!
+Creepers will blow themselves up to get to you through most block types!
+
+Do not install this mod if you are a creative builder!
+
+-----------------
+Prerequisites
+----------------
+
+Please download and install ModOptionsAPI 0.6 from http://www.minecraftforum.net/viewtopic.php?f=1032&t=207630
+
+Please download and install Risugami's Modloader
+http://www.minecraftforum.net/viewtopic.php?t=80246
+
+-----------------
+Installation
+-----------------
+
+1) Find your minecraft.jar (check note below)*
+
+2) Open the minecraft.jar file in WinRAR or 7zip (do not extract it)
+
+3) Extract the contents of the DiggingMobs ZIP file
+
+4) Copy the files into your minecraft.jar 
+
+6) Delete META-INF folder IF it exists in the minecraft.jar
+
+7) Run Minecraft
+
+
+* Windows: <your user folder>/AppData/Roaming/.minecraft/bin/
+* Mac: Home -> Library -> Application Support -> Minecraft -> bin
+* Linux: ~/.minecraft/bin/
+
+------------------
+Compatibility
+------------------
+
+Problems: None Known
+
+------------------
+Developers
+------------------
+
+The forum post has information about developer tools
