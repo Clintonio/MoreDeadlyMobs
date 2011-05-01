@@ -38,6 +38,20 @@ public class EntityCreeper extends EntityMob
 
     public void onUpdate()
     {
+		//===================
+		// START DIGGING MOBS
+		//===================
+		EntityCreature closest = getClosestCreature();
+		
+		if((!isRiding()) && (closest.riddenByEntity == null) 
+			&& (closest instanceof EntitySpider) && (pathToEntity == null)) {
+			if(this.getDistanceToEntity(closest) < 3F) {
+				this.mountEntity(closest);
+			}
+		}
+		//===================
+		// END DIGGING MOBS
+		//===================
         lastActiveTime = timeSinceIgnited;
         if(worldObj.multiplayerWorld)
         {
@@ -83,10 +97,8 @@ public class EntityCreeper extends EntityMob
 	/**
 	* Dig to the current target entity
 	*/
-	protected void digToEntity(Entity digToEntity) {
-		if(mod_DiggingMobs.creepersDig.getValue()) {
-			digToEntity(digToEntity, canDestroy);
-		}
+	public boolean canDig() {
+		return (super.canDig() &&  (mod_DiggingMobs.creepersDig.getValue()));
 	}
 	
 	/**

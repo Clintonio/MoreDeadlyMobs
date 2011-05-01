@@ -1,4 +1,4 @@
-MoreDeadlyMobs 0.4
+MoreDeadlyMobs 0.5
 
 Author: Clinton Alexander
 Description: For the adventurer Minecraft can be too easy! Once you build your first mudhut, the hoardes of undead yearning to feast on the gooey innards of your skull are never a problem again.
@@ -7,9 +7,14 @@ This mod aims to aid your desire for the fray of combat.
 
 Rather than letting your precious shelters remain immortal against all but the dreaded creature, this mod aims to allow zombies the power to crack through certain blocks (and mobs from other mods if the creator chooses to use this mod as a part of theirs)
 
-Zombies will be able to follow you through soft blocks and natural materials.
-Creepers will blow themselves up to get to you!
-Spiders can burrow through very soft materials
+- Zombies will be able to follow you through soft blocks and natural materials.
+- Creepers will blow themselves up to get to you!
+- Spiders can burrow through very soft materials
+- Skeltons and creepers can mount spiders
+- Mobs can now sprint and will travel at much faster speeds to get to you for a short time
+- Mobs follow you more accurately
+- Mobs from other mods will be able to dig too!
+
 
 All mobs benefit from improved following AI and will instantly find their way over ledges.
 

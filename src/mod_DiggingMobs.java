@@ -10,9 +10,11 @@ import net.minecraft.client.Minecraft;
 * @version	0.3.1
 */
 public class mod_DiggingMobs extends BaseMod {
-	public static final ModBooleanOption zombiesDig  = new ModBooleanOption("Zombies Dig");
-	public static final ModBooleanOption creepersDig = new ModBooleanOption("Creepers Dig");
-	public static final ModBooleanOption spidersDig = new ModBooleanOption("Spiders Dig");
+	public static final ModBooleanOption zombiesDig  	= new ModBooleanOption("Zombies Dig");
+	public static final ModBooleanOption creepersDig 	= new ModBooleanOption("Creepers Dig");
+	public static final ModBooleanOption spidersDig 	= new ModBooleanOption("Spiders Dig");
+	public static final ModBooleanOption mobsSprint 	= new ModBooleanOption("Mobs Sprint");
+	public static final ModSliderOption  mobSprintSpeed = new ModSliderOption("Sprint multiplier", 2, 10);
 	
 	/**
 	* Status of the renderer
@@ -26,11 +28,18 @@ public class mod_DiggingMobs extends BaseMod {
 	
 	public mod_DiggingMobs() {
 		ModOptions mod = new ModOptions("More Deadly Mobs");
+		ModOptions sprint = new ModOptions("Sprint Options");
 		
 		mod.addOption(creepersDig);
 		mod.addOption(spidersDig);
 		mod.addOption(zombiesDig);
 		
+		sprint.addOption(mobSprintSpeed);
+		sprint.addOption(mobsSprint);
+		
+		sprint.setWideOption(mobsSprint.getName());
+		
+		mod.addSubOptions(sprint);
 		ModOptionsAPI.addMod(mod);
 		
 	}
