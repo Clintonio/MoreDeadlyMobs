@@ -81,11 +81,6 @@ public class EntityCreeper extends EntityMob
 	// START DIGGING MOBS
 	//===================
 	/**
-	* Block IDs this class of mob can destroy
-	*/
-	public int[] canDestroy = {1, 2, 3, 4, 5, 12, 13, 17, 18, 20, 24, 35, 64, 71, 87};
-	
-	/**
 	* Dig to the current target entity
 	*/
 	protected void digToEntity(Entity digToEntity) {
@@ -95,22 +90,39 @@ public class EntityCreeper extends EntityMob
 	}
 	
 	/**
+	* Destroy a given block
+	* 
+	* @return	True if this block exists and was attempted to dig
+	*/
+	protected boolean attemptDig(int i, int j, int k) {
+		int id = worldObj.getBlockId(i, j, k);
+		if(id != 0) {
+			digThroughBlock(id, i, j, k);
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/**
 	* The action an entity does to dig through a block
 	*
 	* @param	id	ID of block to dig
 	*/
-	protected void digThroughBlock(int id, int i, int j, int k) {
+	protected boolean digThroughBlock(int id, int i, int j, int k) {
 		// Make the creeper explode at the player
 		if(timeSinceIgnited == 0) {
 			worldObj.playSoundAtEntity(this, "random.fuse", 1.0F, 0.5F);
 		}
 		func_21090_e(1);
 		timeSinceIgnited++;
+		hasAttacked = true;
 		if(timeSinceIgnited >= 30) {
 			worldObj.createExplosion(this, i, j, k, 3F);
 			setEntityDead();
 		}
-		hasAttacked = true;
+		
+		return true;
 	}
 	//===================
 	// END DIGGING MOBS

@@ -14,6 +14,20 @@ public class EntityZombie extends EntityMob
         texture = "/mob/zombie.png";
         moveSpeed = 0.5F;
         attackStrength = 5;
+		
+		//===================
+		// START DIGGING MOBS
+		//===================
+		// Items zombies can destroy
+		int[] canDestroy = { 2,  3,  6, 12, 13, 17, 18, 19, 20, 35, 
+							37, 38, 39, 40, 46, 50, 54, 55, 59, 60,
+							64, 69, 70, 71, 72, 75, 76, 77, 78, 79,
+							80, 81, 82, 83, 85, 86, 87, 88, 89, 91, 
+							92};
+		this.canDestroy = canDestroy;
+		//===================
+		// END DIGGING MOBS
+		//===================
     }
 
     public void onLivingUpdate()
@@ -28,14 +42,10 @@ public class EntityZombie extends EntityMob
         }
         super.onLivingUpdate();
     }
+	
 	//===================
 	// START DIGGING MOBS
 	//===================
-	/**
-	* Block IDs that zombies can destroy
-	*/
-	public int[] canDestroy = {2, 3, 12, 13, 18, 20, 35, 64, 71, 79, 80};
-	
 	/**
 	* Dig to the current target entity
 	*/

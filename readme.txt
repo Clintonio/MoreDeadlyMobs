@@ -1,4 +1,4 @@
-MoreDeadlyMobs 0.3.1
+MoreDeadlyMobs 0.4
 
 Author: Clinton Alexander
 Description: For the adventurer Minecraft can be too easy! Once you build your first mudhut, the hoardes of undead yearning to feast on the gooey innards of your skull are never a problem again.
@@ -7,8 +7,11 @@ This mod aims to aid your desire for the fray of combat.
 
 Rather than letting your precious shelters remain immortal against all but the dreaded creature, this mod aims to allow zombies the power to crack through certain blocks (and mobs from other mods if the creator chooses to use this mod as a part of theirs)
 
-Currently, zombies can break through: Mud, Grass, Leaves, Glass, Sand, Wool, Ice and Snow and Wooden Doors!
-Creepers will blow themselves up to get to you through most block types!
+Zombies will be able to follow you through soft blocks and natural materials.
+Creepers will blow themselves up to get to you!
+Spiders can burrow through very soft materials
+
+All mobs benefit from improved following AI and will instantly find their way over ledges.
 
 Do not install this mod if you are a creative builder!
 
@@ -47,6 +50,7 @@ Compatibility
 ------------------
 
 Problems: None Known
+Note: Doesn't edit RenderGlobal, but does override one of the methods of it.
 
 ------------------
 Developers
